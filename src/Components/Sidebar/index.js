@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FaTh, FaUserAlt, FaHistory, FaUsers, FaSignOutAlt} from "react-icons/fa";
+
 import {
   ProSidebar,
   Menu,
@@ -15,7 +17,7 @@ import './style.scss';
 const Sidebar = () => {
 
   return (
-    <ProSidebar style={{height:"100vh"}} >
+    <ProSidebar style={{ height: "100vh" }} >
       <SidebarHeader>
         <div
           style={{
@@ -34,13 +36,28 @@ const Sidebar = () => {
       </SidebarHeader>
       <SidebarContent>
         <Menu iconShape="square">
-          <MenuItem style={menuItem}>Dashboard <Link to="/" /></MenuItem>
-          <SubMenu style={menuItem} title="Perfil">
+          <MenuItem
+            style={menuItem}
+            icon={<FaTh size={30}/>}>
+            Dashboard
+            <Link to="/" />
+          </MenuItem>
+          <SubMenu  
+            style={menuItem} 
+            icon={<FaUserAlt size={30}/>} 
+            title="Perfil">
             <MenuItem style={subMenuItem} >Perfil <Link to="/profile" /></MenuItem>
             <MenuItem style={subMenuItem} >Editar perfil</MenuItem>
           </SubMenu>
-          <MenuItem style={menuItem}>Histórico</MenuItem>
-          <SubMenu style={menuItem} title="Usuários">
+          <MenuItem
+            style={menuItem}
+            icon={<FaHistory size={30}/>}>
+              Histórico
+            </MenuItem>
+          <SubMenu 
+          style={menuItem} 
+          icon={<FaUsers size={30}/>} 
+          title="Usuários">
             <MenuItem style={subMenuItem}>Lista de Usuário</MenuItem>
             <MenuItem style={subMenuItem}>Novo Usuário</MenuItem>
           </SubMenu>
@@ -53,14 +70,10 @@ const Sidebar = () => {
             padding: '20px 24px',
           }}
         >
-          <a
-            href="/"
-            target="_blank"
-            className="sidebar-btn"
-            rel="noopener noreferrer"
-          >
-            <span>Sair</span>
-          </a>
+          <div style={{display: 'flex', flexDirection: 'row', margin: 15}}>
+              <FaSignOutAlt size={30} color="#FF7979"/>
+              <p style={{fontSize:25, margin: 0, marginLeft: 15, color:'#FF7979'}}>Sair</p>
+          </div>
         </div>
       </SidebarFooter>
     </ProSidebar>
