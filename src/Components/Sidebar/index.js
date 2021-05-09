@@ -46,7 +46,7 @@ const Sidebar = () => {
             style={menuItem} 
             icon={<FaUserAlt size={30}/>} 
             title="Perfil">
-            <MenuItem style={subMenuItem} >Perfil <Link to="/profile" /></MenuItem>
+            <MenuItem style={subMenuItem} >Perfil <Link to="/perfil" /></MenuItem>
             <MenuItem style={subMenuItem} >Editar perfil</MenuItem>
           </SubMenu>
           <MenuItem
@@ -59,7 +59,7 @@ const Sidebar = () => {
           icon={<FaUsers size={30}/>} 
           title="Usuários">
             <MenuItem style={subMenuItem}>Lista de Usuário</MenuItem>
-            <MenuItem style={subMenuItem}>Novo Usuário</MenuItem>
+            <MenuItem style={subMenuItem}>Novo Usuário <Link to="/cadastro" /></MenuItem>
           </SubMenu>
         </Menu>
       </SidebarContent>

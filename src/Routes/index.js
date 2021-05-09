@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import Login from '../pages/Login';
+import RegisterUser from '../pages/RegisterUser';
 import Sidebar from '../Components/Sidebar';
 
 const Routes = () => {
@@ -13,7 +14,8 @@ const Routes = () => {
       <div style={{ display: 'flex', flex: 1, flexDirection: 'row' }}>
         <Sidebar />
         <Route path="/" exact component={Dashboard}></Route>
-        <Route path="/profile" exact component={Profile}></Route>
+        <Route path="/perfil" exact component={Profile}></Route>
+        <Route path="/cadastro" exact component={RegisterUser}></Route>
       </div>
     </Switch>
   )
