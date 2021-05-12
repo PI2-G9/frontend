@@ -47,7 +47,7 @@ const Sidebar = () => {
             icon={<FaUserAlt size={30}/>} 
             title="Perfil">
             <MenuItem style={subMenuItem} >Perfil <Link to="/perfil" /></MenuItem>
-            <MenuItem style={subMenuItem} >Editar perfil</MenuItem>
+            <MenuItem style={subMenuItem} >Editar perfil<Link to="/editar" /></MenuItem>
           </SubMenu>
           <MenuItem
             style={menuItem}
