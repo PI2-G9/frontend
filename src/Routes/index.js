@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import EditUser from '../pages/EditUser';
 import RegisterUser from '../pages/RegisterUser';
 import History from '../pages/History';
+import Users from '../pages/Users';
 import Sidebar from '../Components/Sidebar';
 
 const Routes = () => {
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path="/cadastro" exact component={RegisterUser}></Route>
         <Route path="/editar" exact component={EditUser}></Route>
         <Route path="/historico" exact component={History}></Route>
+        <Route path="/usuarios" exact component={Users}></Route>
       </div>
     </Switch>
   )

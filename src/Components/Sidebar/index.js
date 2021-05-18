@@ -59,7 +59,7 @@ const Sidebar = () => {
           style={menuItem} 
           icon={<FaUsers size={30}/>} 
           title="Usuários">
-            <MenuItem style={subMenuItem}>Lista de Usuário</MenuItem>
+            <MenuItem style={subMenuItem}>Lista de Usuário <Link to="/usuarios" /></MenuItem>
             <MenuItem style={subMenuItem}>Novo Usuário <Link to="/cadastro" /></MenuItem>
           </SubMenu>
         </Menu>
