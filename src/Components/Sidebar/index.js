@@ -53,6 +53,7 @@ const Sidebar = () => {
             style={menuItem}
             icon={<FaHistory size={30}/>}>
               Histórico
+              <Link to="/historico" />
             </MenuItem>
           <SubMenu 
           style={menuItem} 
