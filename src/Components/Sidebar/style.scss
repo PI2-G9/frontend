@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$sidebar-bg-color: #F6F5F5;
+$sidebar-color: #276678;
+$highlight-color: #276678;
+$submenu-bg-color: #F6F5F5;
+$icon-bg-color: #F6F5F5;
+$icon-size: 50px;
+$sidebar-collapsed-width: 80px;
+$sidebar-width: 300px;
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
+body {
+  margin: 0;
+  height: 100vh;
+  color: #353535;
+  font-family: 'Open Sans', sans-serif;
+}
