@@ -1,8 +1,17 @@
 import React from 'react';
 import Style from './style';
 import { FaRegEdit, FaRegTrashAlt, FaSignOutAlt, FaSignInAlt } from "react-icons/fa";
+import users from '../../service/data/users';
+import history from '../../service/data/history';
 
 const Profile = () => {
+
+  const userIndex = 0;
+
+  const userHistory = history.filter((his) => {
+    return his.name === users[userIndex].name 
+  });
+
   return (
     <div style={Style.container}>
       <div style={Style.card}>
@@ -17,19 +26,19 @@ const Profile = () => {
           <div style={{ dispĺay: 'flex', width: '30%', height: '100%', justifyContent: 'center', flexDirection: 'row' }}>
             <img
               style={{
-                width: '60%',
+                width: '65%',
                 height: '90%',
                 borderRadius: "50%",
                 overflow: "hidden",
                 margin: 0
               }}
               alt='pic'
-              src="https://www.mktesportivo.com/wp-content/uploads/2021/05/690685.jpg" />
+              src={users[userIndex].img} />
           </div>
           <div style={{ width: '60%', display: 'flex', flexDirection: 'column' }}>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Nome:</h3>
-              <h3 style={Style.text}>Ayrton Senna</h3>
+              <h3 style={Style.text}>{users[userIndex].name}</h3>
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Data de Nascimento:</h3>
@@ -37,23 +46,23 @@ const Profile = () => {
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Telefone:</h3>
-              <h3 style={Style.text}>(11) 9999-9999</h3>
+              <h3 style={Style.text}>{users[userIndex].phone}</h3>
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>CPF:</h3>
-              <h3 style={Style.text}>123.456.789-12</h3>
+              <h3 style={Style.text}>{users[userIndex].cpf}</h3>
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Endereço:</h3>
-              <h3 style={Style.text}>R. Dr. Fernandes Coelho, 85</h3>
+              <h3 style={Style.text}>{users[userIndex].address}</h3>
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Bairro:</h3>
-              <h3 style={Style.text}>Pinheiros</h3>
+              <h3 style={Style.text}>{users[userIndex].district}</h3>
             </div>
             <div style={Style.textContainer}>
               <h3 style={{ ...Style.text, fontWeight: 'bold' }}>Cidade:</h3>
-              <h3 style={Style.text}>São Paulo - SP</h3>
+              <h3 style={Style.text}>{`${users[userIndex].city}-${users[userIndex].uf}`}</h3>
             </div>
           </div>
         </div>
@@ -81,36 +90,29 @@ const Profile = () => {
                   <p style={Style.textHeader}>Data</p>
                 </div>
               </div>
-              <div style={{ flex: 1, display: 'flex'}}>
-                <div style={Style.historyHeader}>
-                  <FaSignInAlt style={Style.icon}/>
-                </div>
-                <div style={{...Style.historyHeader, width: '40%' }}>
-                  <p style={Style.textHeader}>Ayrton Senna</p>
-                </div>
-                <div style={Style.historyHeader}>
-                  <p style={Style.textHeader}>35 °C</p>
-                </div>
-                <div style={{...Style.historyHeader, flexDirection: 'column'}}>
-                  <p style={Style.textHeader}>10:01</p>
-                  <p style={Style.textHeader}>10/04/2021</p>
-                </div>
-              </div>
-              <div style={{ flex: 1, display: 'flex'}}>
-                <div style={Style.historyHeader}>
-                  <FaSignOutAlt style={Style.icon}/>
-                </div>
-                <div style={{...Style.historyHeader, width: '40%' }}>
-                  <p style={Style.textHeader}>Ayrton Senna</p>
-                </div>
-                <div style={Style.historyHeader}>
-                  <p style={Style.textHeader}>35 °C</p>
-                </div>
-                <div style={{...Style.historyHeader, flexDirection: 'column'}}>
-                  <p style={Style.textHeader}>10:01</p>
-                  <p style={Style.textHeader}>10/04/2021</p>
-                </div>
-              </div>
+              {userHistory.map((history) => {
+                return (
+                  <div style={{ flex: 1, display: 'flex' }}>
+                    <div style={Style.historyHeader}>
+                      { history.exit? 
+                      <FaSignOutAlt style={Style.icon} />
+                      :
+                      <FaSignInAlt style={Style.icon} />
+                      }
+                    </div>
+                    <div style={{ ...Style.historyHeader, width: '40%' }}>
+                      <p style={Style.textHeader}>{history.name}</p>
+                    </div>
+                    <div style={Style.historyHeader}>
+                      <p style={Style.textHeader}>{history.temperature}</p>
+                    </div>
+                    <div style={{ ...Style.historyHeader, flexDirection: 'column' }}>
+                      <p style={Style.textHeader}>{history.hour}</p>
+                      <p style={Style.textHeader}>{history.date}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdAddAPhoto } from "react-icons/md";
 import { RiImageAddFill } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 
 const RegisterUser = () => {
   return (
@@ -101,12 +101,14 @@ const RegisterUser = () => {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <button style={{
-              backgroundImage: 'linear-gradient(120deg, #F6F5F5, #D3E0EA)', color: '#515151',
-              width: '15vw', height: 40, borderRadius: 10, fontSize: 25, margin: 10, border: 'none',
-            }}>
-              Cancelar
+            <Link to="/">
+              <button style={{
+                backgroundImage: 'linear-gradient(120deg, #F6F5F5, #D3E0EA)', color: '#515151',
+                width: '15vw', height: 40, borderRadius: 10, fontSize: 25, margin: 10, border: 'none',
+              }}>
+                Cancelar
             </button>
+            </Link>
             <button style={{
               backgroundImage: 'linear-gradient(120deg, #276678, #1687A7)', color: 'white',
               width: '15vw', height: 40, borderRadius: 10, fontSize: 25, margin: 10, border: 'none',

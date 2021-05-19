@@ -1,0 +1,9 @@
+const users = [
+  { name: 'Catarina Ferraz Mata', phone: '(38) 23684-6383', cpf: '572.421.320-61', address: 'R. Dr. Fernandes Coelho', number:85, district: 'Pinheiros', city: 'São Paulo', uf: 'SP', status: 'Liberado', img: 'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg', },
+  { name: 'Henry Nolasco Reis', phone: '(65) 81367-9817', cpf: '996.212.780-74', address: 'R. Dr. Fernandes Coelho', number:85, district: 'Pinheiros', city: 'São Paulo', uf: 'SP', status: 'Liberado', img: 'https://media.istockphoto.com/photos/mature-handsome-business-man-picture-id1040308104?k=6&m=1040308104&s=612x612&w=0&h=l_bUE9cP9Hj1UmxPq4i-gMXkDF1GzfO7Eel7iB4Kc74=', },
+  { name: 'Fátima Silveira Guerreiro', phone: '(79) 24487-1699', cpf: '613.093.790-33', address: 'R. Dr. Fernandes Coelho', number:85, district: 'Pinheiros', city: 'São Paulo', uf: 'SP', status: 'Liberado', img: 'https://img.freepik.com/free-photo/friendly-smiling-woman-looking-pleased-front_176420-20779.jpg?size=626&ext=jpg', },
+  { name: 'Marcel Martins Natal', phone: '(76) 47421-0605', cpf: '833.546.330-18', address: 'R. Dr. Fernandes Coelho', number:85, district: 'Pinheiros', city: 'São Paulo', uf: 'SP', status: 'Liberado', img: 'https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg', },
+  { name: 'Ester Lalanda Portela', phone: '(38) 84042-2949', cpf: '843.757.820-56', address: 'R. Dr. Fernandes Coelho', number:85, district: 'Pinheiros', city: 'São Paulo', uf: 'SP', status: 'Liberado', img: 'https://www.befunky.com/images/prismic/a9ebf7f0-2965-41e5-a2d1-3ce85426986e_portrait-enhancer.jpg?auto=webp&format=jpg&width=1920&height=1920&fit=bounds', },
+];
+
+export default users;

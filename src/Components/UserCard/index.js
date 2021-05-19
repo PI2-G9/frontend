@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaRegEdit } from "react-icons/fa";
 
-const UserCard = ({name, phone}) => {
+const UserCard = ({name, phone, pic}) => {
   return (
     <div style={{display:'flex', flexDirection: 'row'}}>
       <img
@@ -13,8 +13,9 @@ const UserCard = ({name, phone}) => {
           margin: 10
         }}
         alt="user"
-        src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1"
+        src={pic}
       />
+      {console.log(pic)}
       <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
         <p style={{color: '#276678', fontSize: 20, margin: 4}}>{name}</p>
         <p style={{color: '#276678', fontSize: 16, margin: 2}}>{phone}</p>

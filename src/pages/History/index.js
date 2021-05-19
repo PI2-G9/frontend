@@ -1,6 +1,8 @@
 import React from 'react';
 import Style from './style';
 import { FaSignOutAlt, FaSignInAlt } from "react-icons/fa";
+import history from '../../service/data/history';
+
 
 
 const History = () => {
@@ -34,23 +36,31 @@ const History = () => {
               <p style={Style.textHeader}>Data</p>
             </div>
           </div>
-          <div style={{ flex: 1, display: 'flex' }}>
-            <div style={{...Style.historyHeader, width: '10%'}}>
-              <FaSignOutAlt style={Style.icon} />
-            </div>
-            <div style={{ ...Style.historyHeader, width: '30%' }}>
-              <p style={Style.textHeader}>Ayrton Senna</p>
-            </div>
-            <div style={Style.historyHeader}>
-              <p style={Style.textHeader}>35 °C</p>
-            </div><div style={Style.historyHeader}>
-              <p style={Style.textHeader}>(11) 9999-9999</p>
-            </div>
-            <div style={{ ...Style.historyHeader, flexDirection: 'column' }}>
-              <p style={Style.textHeader}>10:01</p>
-              <p style={Style.textHeader}>10/04/2021</p>
-            </div>
-          </div>
+          {history.map((his) => {
+            return (
+              <div style={{ flex: 1, display: 'flex' }}>
+                <div style={{ ...Style.historyHeader, width: '10%' }}>
+                  {his.exit ?
+                    <FaSignOutAlt style={Style.icon} />
+                    :
+                    <FaSignInAlt style={Style.icon} />
+                  }
+                </div>
+                <div style={{ ...Style.historyHeader, width: '30%' }}>
+                  <p style={Style.textHeader}>{his.name}</p>
+                </div>
+                <div style={Style.historyHeader}>
+                  <p style={Style.textHeader}>{his.temperature}</p>
+                </div><div style={Style.historyHeader}>
+                  <p style={Style.textHeader}>{his.phone}</p>
+                </div>
+                <div style={{ ...Style.historyHeader, flexDirection: 'column' }}>
+                  <p style={Style.textHeader}>{his.hour}</p>
+                  <p style={Style.textHeader}>{his.date}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

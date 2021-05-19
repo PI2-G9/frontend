@@ -1,6 +1,7 @@
 import React from 'react';
 import Style from './style';
-import { FaSignOutAlt, FaTrash, FaUser, FaEdit } from "react-icons/fa";
+import { FaTrash, FaUser, FaEdit } from "react-icons/fa";
+import users from '../../service/data/users';
 
 
 const Users = () => {
@@ -34,32 +35,37 @@ const Users = () => {
               <p style={Style.textHeader}>Ações</p>
             </div>
           </div>
-          <div style={{ flex: 1, display: 'flex' }}>
-            <div style={{ ...Style.historyHeader, width: '15%' }}>
-              <img
-                style={{
-                  width: 80,
-                  height: 80,
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                }}
-                alt='pic'
-                src="https://www.mktesportivo.com/wp-content/uploads/2021/05/690685.jpg" />
-            </div>
-            <div style={{ ...Style.historyHeader, width: '30%' }}>
-              <p style={Style.textHeader}>Ayrton Senna</p>
-            </div>
-            <div style={Style.historyHeader}>
-              <p style={Style.textHeader}>(11) 9999-9999</p>
-            </div><div style={Style.historyHeader}>
-              <p style={Style.status}>Aprovado</p>
-            </div>
-            <div style={{ ...Style.historyHeader, flexDirection: 'row' }}>
-              <FaEdit style={Style.icon} />
-              <FaUser style={Style.icon} />
-              <FaTrash style={Style.icon} />
-            </div>
-          </div>
+          {users.map((user) => {
+            return (
+              <div style={{ flex: 1, display: 'flex' }}>
+                <div style={{ ...Style.historyHeader, width: '15%' }}>
+                  <img
+                    style={{
+                      width: 80,
+                      height: 80,
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      margin: 15
+                    }}
+                    alt='pic'
+                    src={user.img} />
+                </div>
+                <div style={{ ...Style.historyHeader, width: '30%' }}>
+                  <p style={Style.textHeader}>{user.name}</p>
+                </div>
+                <div style={Style.historyHeader}>
+                  <p style={Style.textHeader}>{user.name}</p>
+                </div><div style={Style.historyHeader}>
+                  <p style={Style.status}>{user.status}</p>
+                </div>
+                <div style={{ ...Style.historyHeader, flexDirection: 'row' }}>
+                  <FaEdit style={Style.icon} />
+                  <FaUser style={Style.icon} />
+                  <FaTrash style={Style.icon} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div >
