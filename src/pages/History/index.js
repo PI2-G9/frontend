@@ -50,9 +50,10 @@ const History = () => {
                   <p style={Style.textHeader}>{his.name}</p>
                 </div>
                 <div style={Style.historyHeader}>
+                  <p style={Style.textHeader}>{his.phone }</p>
+                </div>
+                <div style={Style.historyHeader}>
                   <p style={Style.textHeader}>{his.temperature}</p>
-                </div><div style={Style.historyHeader}>
-                  <p style={Style.textHeader}>{his.phone}</p>
                 </div>
                 <div style={{ ...Style.historyHeader, flexDirection: 'column' }}>
                   <p style={Style.textHeader}>{his.hour}</p>

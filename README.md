@@ -26,3 +26,7 @@ yarn start
 Após executar o projeto, será possível acessá-lo, pelo seu navegador, na seguinte url: 
 
 [http://localhost:3000](http://localhost:3000/)
+
+### Vídeo de demonstração do website
+
+Para ver o video de demonstração do website, basta acessar: [Vídeo](https://drive.google.com/file/d/1DR6XOY8P8Pu90aXE1tSK8-PDyNGh9V-q/view?usp=sharing)

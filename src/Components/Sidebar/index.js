@@ -71,10 +71,12 @@ const Sidebar = () => {
             padding: '20px 24px',
           }}
         >
+          <Link to="/login" style={{textDecoration: 'none'}}>
           <div style={{display: 'flex', flexDirection: 'row', margin: 15}}>
               <FaSignOutAlt size={30} color="#FF7979"/>
               <p style={{fontSize:25, margin: 0, marginLeft: 15, color:'#FF7979'}}>Sair</p>
           </div>
+          </Link>
         </div>
       </SidebarFooter>
     </ProSidebar>

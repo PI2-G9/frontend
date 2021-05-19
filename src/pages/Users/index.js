@@ -54,7 +54,7 @@ const Users = () => {
                   <p style={Style.textHeader}>{user.name}</p>
                 </div>
                 <div style={Style.historyHeader}>
-                  <p style={Style.textHeader}>{user.name}</p>
+                  <p style={Style.textHeader}>{user.phone}</p>
                 </div><div style={Style.historyHeader}>
                   <p style={Style.status}>{user.status}</p>
                 </div>

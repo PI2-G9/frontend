@@ -6,7 +6,7 @@ import history from '../../service/data/history';
 
 const Profile = () => {
 
-  const userIndex = 0;
+  const userIndex = 3;
 
   const userHistory = history.filter((his) => {
     return his.name === users[userIndex].name 
